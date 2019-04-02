@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <head>
+        <title>web-form연습</title>
+    </head>
+    <body>
+        <form method="post" action="#">
+            <h3>색 선택하기 (color)</h3>
+            <input type="color" value="#238e23"
+            onchange="document.body.style.color=this.value">
+            <hr>
+            <h3>날짜(month, week, date, datetime, time)</h3>
+            <input type="month" value="2019-03" /><br>
+            <input type="week" /><br>
+            <input type="date" value="2019-03-29" /><br>
+            <input type="datetime-local" /><br>
+            <input type="time" /><br>
+            <hr>
+            <h3>숫자 입력</h3>
+                <input type="number" min="0" max="10" step="2" />
+            <hr>
+            <h3>range범위</h3>
+            설정온도<input type="range" min="0" max="100" list="temperatures">
+            <datalist id="temperatures">
+                <option value="10" label="LOW">
+                <option value="50" label="MEDIUM">
+                <option value="100" label="HIGH">
+            </datalist>
+            <hr>
+            <h3>지속시간</h3>
+            <input type="number" min="0.0" max="10.0" step="0.5">
+            <br>
+            온도설정 : 10&deg;
+            <input type="range" min="10" max="30" list="tem"> 30&deg;
+            <datalist id="tem">
+                    <option value="12" label="LOW">
+                    <option value="20" label="MEDIUM">
+                    <option value="28" label="HIGH">
+                </datalist>
+        </form>
+    </body>
+</head>

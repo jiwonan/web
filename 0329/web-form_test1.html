@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>web-form 연습</title>
+    </head>
+    <body>
+        <h3>HTML5 웹 프로그래밍 = HTML5+CSS3+JAVASCRIPT</h3>
+        <a href = "https://www.w3schools.com/" target = "_blank"><button type = "button">Learn HTML</button></a>
+        <a href = "https://www.w3schools.com/" target = "_blank"><button type = "button">CSS3</button></a>
+        <a href = "https://www.w3schools.com/" target = "_blank"><button type = "button">JAVASCRIPT</button></a>
+        <button type = "button">클릭</button>
+        <br>
+        글 남기기<input type = "text" name = "user_id" value = "ID입력요망">
+        <input type = "submit" name = "save" value = "저장"/>
+        <input type = "reset" name = "bt1" value = "지우기"/>
+        <a href="https://www.w3schools.com/"><button type = "button"><img src = "../img/over01.png" width = "300" height = "300"></button></a>
+        <button type = "button" onclick="alert('버튼클릭')"><img src = "../img/over01.png" width = "300" height = "300"></button>
+        <hr>
+        <h3>방명록 작성하기</h3>
+        <textarea rows = "10" cols = "50" name = "text">
+            방문흔적
+        </textarea>
+        <br>
+        <input type = "submit" name = "save1" value = "저장" />
+        <input type = "reset" name = "bt2" value = "지우기" />
+        <hr>
+        <h3><b>select / option</b></h3>
+        <h3><b>국적과 여행간 국가를 선택하세요</b></h3>
+        국적 : <select name = "country" size="2" multiple>
+            <option value="France">France</option>
+            <option value="Korea">Korea</option>
+            <option value="U.S.A">U.S.A</option>
+            <option value="기타">기타</option>
+        </select>
+        <input type = "submit" name = "save2" value="데이터전송"/>
+        <hr>
+        <h3>datalist</h3>
+        나라 : <input type="text" list="nation">
+            <datalist id = "nation">
+                <option value="한국">
+                <option value="미국">
+                <option value="일본">
+                <option value="중국">
+                <option value="대만">
+            </datalist>
+            <br>
+            보고싶은 것 : <input type="text" list="trip">
+            <datalist id = "trip">
+                <option value="mountain">산</option>
+                <option value="sea">바다</option>
+                <option value="city">도시</option>
+            </datalist>
+            <hr>
+            <h3>먹고 싶은 것 하나만 선택?</h3>
+            <label for="jajang">
+            <input type = "radio" name = "food" id="jajang"/>짜장면<img src="../img/jajang.jpg" width="150" height="150"><br>
+            </label>
+            <label for="jambbong">
+            <input type = "radio" name = "food" id="jambbong" checked/>짬뽕<img src="../img/janbbong.jpg" width="150" height="150"><br>
+            </label>
+            <label for="tangsuyuk">
+            <input type = "radio" name = "food" id="tangsuyuk"/>탕수육<img src="../img/tangsuyuk.jpg" width="150" height="150"><br>
+            </label>
+            <hr>
+            <h3>
+                <label for="txt">아이디</label>
+                <input type="text" name = "id" id="txt"/>
+            </h3>
+    </body>
+</html>
