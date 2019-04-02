@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form 태그</title>
+    </head>
+    <body>
+        <form method="post" action="#"> <!-- <<암기 #은 임시로 달아주는 것-->
+            아이디 <input type="text" name="user_id" value="abc" size="15"/></br> <!--input type과 name은 필수 다른 것은 옵션-->
+            비밀번호 <input type="password" name="pwd" value="12"/></br>
+            <input type="submit" name="bt" value="로그인"/>
+            <input type="reset" name="bt2" value="다시 입력" />
+        <hr>
+        <h3>학생의 성별과 학년은?<br/>(checkbox/radio)</h3>
+        <input type="radio" name="gender" value="mail" />남성
+        <input type="radio" name="gender" value="femail" checked/>여성<br/> <!--서버에 gender에 femail로 넘어감-->
+        <input type="radio" name="year" value="1" />1학년<br/>
+        <input type="radio" name="year" value="2" />2학년<br/>
+        <input type="radio" name="year" value="3" />3학년<br/>
+        <hr>
+        <h3>즐겨보는 프로그램?</h3><!--checkbox에서 중복체크 시 배열로 넘어감-->
+        <input type="checkbox" name="sport" value="a" />스포츠
+        <input type="checkbox" name="sport" value="b" />농구
+        <input type="checkbox" name="sport" value="c" checked/>배구
+        <input type="checkbox" name="sport" value="d" />야구
+        <hr>
+        <h3>첨부파일을 올리시오</h3>
+        <input type="file" name="myfile">
+        <hr>
+        </form>
+    </body>
+</html>
