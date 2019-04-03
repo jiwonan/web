@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Join Us</title>
+        <style>
+            .a {
+                background-color:yellowgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <table border = "1" bordercolor = "pink">
+            <caption><h3>회원가입</h3></caption>
+                <colgroup>
+                    <col span="1" bgcolor="#E0F8F7">
+                </colgroup>
+            <tr>
+                <td class="a">아이디</td>
+                <td><input type = "text" name = "id"> <input type = "submit" name = "sb" value = "중복확인" required></td>
+            </tr>
+            <tr>
+                <td class="a">이름</td>
+                <td><input type = "text" name = "name"></td>
+            </tr>
+            <tr>
+                <td class="a">성별</td>
+                <td><input type = "radio" name = "gender">남<input type = "radio" name = "gender">여</td>
+            </tr>
+            <tr>
+                <td class="a">암호</td>
+                <td><input type = "password" name = "pw"></td>
+            </tr>
+            <tr>
+                <td class="a">암호확인</td>
+                <td><input type = "password" name = "pw_again">*같은 암호를 입력하세요</td>
+            </tr>
+            <tr>
+                <td class="a">이메일</td>
+                <td><input type = "email" name = "email_front"> @ <input type = "email" name = "email_back">
+                <select name = "email" size = "1">
+                    <option value = "naver.com">naver.com</option>
+                    <option value = "daum.net">daum.net</option>
+                    <option value = "google.com">google.com</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td class="a">주소</td>
+                <td><input type = "text" name = "address"><input type = "submit" name = "found" value = "주소찾기"></td>
+            </tr>
+            <tr>
+                <td class="a">휴대폰</td>
+                <td><input type = "radio" name = "Telecom"> SKT 
+                    <input type = "radio" name = "Telecom"> KT <input type = "radio" name = "Telecom"> LGU+ 
+                <br><select name = "phone_num" size = "1">
+                    <option value = "010">010</option>
+                    <option value = "011">011</option>
+                    <option value = "02">02</option>
+                </select>   
+            -<input tpye = "text" size = "4" name = "middle_PhoneNum">-<input type = "text" size = "4" name = "last_PhoneNum"></td>
+            </tr>
+            <tr>
+                <td class="a">관심</td>
+                <td><input type="checkbox" name = "interest"> 쇼핑 <input type="checkbox" name = "interest"> 게임 
+                    <input type="checkbox" name = "interest"> 여행 <input type="checkbox" name = "interest"> 기타</td>
+            </tr>
+            <tr>
+                <td class="a">자기소개</td>
+                <td>
+                    <textarea rows = "10" cols = "50" name = "text">  
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align = "center" bgcolor="white"><input type = "submit" name = "sign_in" value = "확인">
+                    <input type = "reset" name = "rs" value = "다시입력">
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <form>
+        <input type = "text" required /><br>
+        <input type = "text" disabled><br>
+        <input type = "text" autofocus><br>
+        <input type="submit" value="login">
+        <button type = "submit" name = "login" value = "로그인">로그인</button><br>
+        <input type = "email" placeholder="naver.com"><br>
+        <input type = "search" autocomplete="on"><br>
+        </form>
+    </body>
+</html>
