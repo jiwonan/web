@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table</title>
+        <style>
+            table {
+                border-width : 4px 1px;
+                border-color : red;
+            }
+            tr {
+                background-color:skyblue;
+            }
+            table:nth-child(2){
+                background-color : gray;
+            }
+            tr:hover {  
+                background-color:orange;
+            }
+            .c0 {
+
+            }
+            .c4 {
+
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1px" width = "600" height="200" rules="all">
+            <caption><center>수업시간표</center></caption>
+            <tr align = "center">
+                <th class="c0">시간/요일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th class="c4">목</th>
+            </tr>
+            <tr align = "center">
+                <td class="c0">1</td>
+                <td></td>
+                <td></td>
+                <td class="c4"></td>
+                <td rowspan = "3" class="c4">CSS</td>
+            </tr>
+            <tr align = "center">
+                <td class="c0">2</td>
+                <td rowspan="2">HTML5</td>
+                <td></td>
+                <td class="c4"></td>
+            </tr>
+            <tr align="center">
+                <td class="c0">3</td>
+                <td></td>
+                <td class="c4"></td>
+            </tr>
+            <tr align="center">
+                <td class="c0">4</td>
+                <td></td>
+                <td colspan="2">JavaScript</td>
+                <td class="c4"></td>
+            </tr>
+            <tr align="center">
+                <td class="c0">5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="c4"></td>
+            </tr>
+        </table>
+    </body>
+</html>
