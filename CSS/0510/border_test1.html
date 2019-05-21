@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>radius-test</title>
+        <style>
+            p {
+                border:1px solid pink;
+                width:250px;
+                height:200px;
+                text-align: center;
+                line-height: 200px;
+                background-color:mistyrose;
+                font-family: DX빨간우체통B;
+                padding: 20px;
+            }
+            #round1 {
+                border-radius: 50px;
+            }
+            #round2 {
+                border-radius: 0px 20px 40px 60px;
+            }
+            #round3 {
+                border-radius: 0px 20px 40px;
+            }
+            #round4 {
+                border-radius: 0px 20px;
+            }
+            #round5 {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>둥근 모서리 테두리</h3>
+        <hr>
+        <p id="round1">반지름 50px의 모서리</p>
+        <p id="round2">반지름 0, 20, 40, 60의 모서리</p>
+        <p id="round3">반지름 0, 20, 40, 20의 모서리</p>
+        <p id="round4">반지름 0, 20, 0, 20의 모서리</p>
+        <p id="round5">반지름 50의 모서리</p>
+    </body>
+</html>

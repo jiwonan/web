@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>text-shadow practice</title>
+        <style>
+            h1 {
+                text-align:center;
+                height: 200px;
+                line-height: 200px;
+                width:300px;
+                border: 1px solid pink;
+                /*border-style을 쓰지 않으면 선이 안나옴*/
+            }
+            #b1 {
+                text-shadow: 2px 2px;
+            }
+            #b2 {
+                text-shadow: 2px 2px blue;
+            }
+            #b3 {
+                text-shadow: 2px 2px 6px gray;
+            }
+            #b4 {
+                text-shadow: 0 0 3px #AD00ff, 0 0 5px #ffA0f0;
+            }
+            #b5 {
+                text-shadow: 1px 1px 2px black, 0 0 2px blue, 0 0 5px darkblue;
+            }
+            #b6 {
+                text-shadow: -2px 0 black, 0 2px black, 0 -2px yellow;
+            }
+            #b7 {
+                text-shadow: 0 0 6px #ffdd33, -0 0 6px #ffA0f0;
+            }
+            #b8 {
+                text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+                color: white;
+            }
+            #b9 {
+                text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+                color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="b1">Text-shadow</h1>
+        <h1 id="b2">Text-shadow</h1>
+        <h1 id="b3">Text-shadow</h1>
+        <h1 id="b4">Text-shadow</h1>
+        <h1 id="b5">Text-shadow</h1>
+        <h1 id="b6">Text-shadow</h1>
+        <hr>
+        <h1 id="b7">Text-shadow</h1>
+        <h1 id="b8">Text-shadow</h1>
+        <h1 id="b9">Text-shadow</h1>
+    </body>
+</html>

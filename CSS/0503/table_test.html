@@ -4,11 +4,21 @@
         <title>Table</title>
         <style>
             table {
-                border-width : 4px 1px;
-                border-color : red;
+                border-width : 4px 2px;
+                border-color: blue skyblue;
+                border-collapse:collapse;
+                border-style:solid;
             }
             tr {
                 background-color:skyblue;
+                border-color: red;
+                border-style:solid;
+                border-width:1px;
+            }
+            th {
+                background-color: lightgray;
+                border-color: blue skyblue;
+                border-bottom-width : 2px;
             }
             table:nth-child(2){
                 background-color : gray;
@@ -25,7 +35,7 @@
         </style>
     </head>
     <body>
-        <table border="1px" width = "600" height="200" rules="all">
+        <table border="1px" width = "600" height="200">
             <caption><center>수업시간표</center></caption>
             <tr align = "center">
                 <th class="c0">시간/요일</th>
