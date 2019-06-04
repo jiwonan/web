@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>position practice</title>
+        <style>
+            #parent {
+                position: relative;
+                display: inline-block;
+            }
+            .top {
+                background-color: goldenrod;
+                width: 200px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+            }
+            #child {
+                position: absolute;
+                left: 50%;
+                top: 80%;
+                font-size: 0px;
+                transform: translate(-50%, 0%);
+            }
+            .menu {
+                line-height: 40px;
+                text-align: center;                
+            }
+            #parent:hover #child{
+                display: inline-block;
+                background-color: tomato;
+                width: 150px;
+                height: auto;
+                position: absolute;
+                font-size: 16px;
+                line-height: 40px;
+                text-align: center;
+            }
+            #child .menu:hover {
+                background-color: skyblue;
+                width: 150px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="parent">
+            <div class="top">메뉴항목</div>
+            <div id="child">
+                <div class="menu">서브 메뉴1</div>
+                <div class="menu">서브 메뉴2</div>
+                <div class="menu">서브 메뉴3</div>
+            </div>
+        </div>
+    </body>
+</html>
