@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원가입</title>
+        <style>
+            table,td {  
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            table {
+                margin: auto;
+            }
+            #left {
+                width: 100px;
+                height: 50px;
+                padding: 5px;
+            }
+            #left_input {
+                width: 300px;
+                height: 50px;
+                padding: 5px;
+            }
+            #right {
+                width: 120px;
+                height: 50px;
+                padding: 5px;
+            }
+            #right_input {
+                width: 180px;
+                height: 50px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+        <table>
+            <tr>
+                <td id="left">이름</td>
+                <td id="left_input"><input type="text" name="name"></td>
+                <td id="right">생년월일</td>
+                <td id="right_input"><input type="text" name="birth"></td>
+            </tr>
+            <tr>
+                <td id="left">아이디</td>
+                <td id="left_input"><input type="text" name="id"></td>
+                <td id="right">비밀번호</td>
+                <td id="right_input"><input type="password" name="pw"></td>
+            </tr>
+            <tr>
+                <td id="left">이메일</td>
+                <td id="left_input"><input type="email" name="email"></td>
+                <td id="right">비밀번호확인</td>
+                <td id="right_input"><input type="password" name="pw_again"></td>
+            </tr>
+            <tr>
+                <td id="left">주소</td>
+                <td id="left_input">
+                    <select name="addr">
+                        <option value="서울특별시">서울특별시</option>
+                        <option value="부산광역시">부산광역시</option>
+                        <option value="대구광역시">대구광역시</option>
+                        <option value="인천광역시">인천광역시</option>
+                        <option value="광주광역시">광주광역시</option>
+                        <option value="대전광역시">대전광역시</option>
+                        <option value="울산광역시">울산광역시</option>
+                        <option value="세종특별자치시">세종특별자치시</option>
+                    </select>
+                    <input type="text" name="more_addr" value="상세주소">
+                </td>
+                <td id="right">성별</td>
+                <td id="right_input">
+                    <label><input type="radio" name="gender">Male</label>
+                    <label><input type="radio" name="gender">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td id="left">연락처</td>
+                <td id="left_input"><input type="text" name="tel"></td>
+                <td id="right">정보수신</td>
+                <td id="right_input">
+                    <label><input type="checkbox" name="serve">이메일</label>
+                    <label><input type="checkbox" name="serve">SMS</label>
+                </td>
+            </tr>
+            <tr>
+                <td id="left">메모</td>
+                <td colspan="3">
+                    <textarea row="330" cols="40">
+                        메모를 남겨주세요.
+                    </textarea>
+                </td>
+            </tr>
+        </table>
+        <input type="reset" value="취소">
+        <input type="submit" name="info" value="등록">
+    </form>
+    </body>
+</html>
