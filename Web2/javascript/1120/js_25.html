@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트란</title>
+    </head>
+    <body>
+        <script>
+            function borderFunc() {
+                var chk = document.getElementById("bord");
+                chk.style.border = "2px dotted pink";
+            }
+            function pnumFunc() {
+                var tag = document.getElementsByTagName("p");
+                var num = tag.length;
+                alert("p태그의 개수는 "+num+"개");
+            }
+        </script>
+        <h3>자바스크립트란</h3>
+        <input type = "button" value = "border" id = "bd" onclick="borderFunc()">
+        <input type = "button" value = "p" id = "pnum" onclick="pnumFunc()">
+        <hr>
+        <p>도대체 불륜녀는 누구인가. SBS 월화드라마백화점 VIP</p>
+        <p><span id="bord">가 무엇보다 흥미로운 건</span> 박성준(이성윤)을 의심케 하는 불륜의 대상이 누군가 하는 점이다.</p>
+        <p>물론 그렇다고 이 드라마가 소위 말하는 불륜드라마라는 건 아니다. 결국 하려는 이야기는 이들이 이야기는 이들이 일하는 전담팀으로<br>
+            대변되는 돈과 서열에 의해 굴러가는 우리네 사회이고, 거기서 나정선(장나라), 이현아(이청아), 송미나(곽선영) 그리고<br>
+            온유리(표예진)</p>
+    </body>
+</html>

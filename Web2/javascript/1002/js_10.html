@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>글자 크기 변경</title>
+    </head>
+    <body>
+        <h3>10px-35px크기로 변경해서 출력</h3>
+        <hr>
+        <script>
+            for ( var i= 10;i<=35;i+=5) {
+                document.write("<span ");
+                document.write("style = 'font-size:"+i+"px'>");
+                document.write(i+"px ");
+                document.write("</span>");
+                // <span style = 'font-size : ipx'>
+                // break : 가장 가까운 반복문을 빠져나가는 것.
+                // continue : (다음 문장을)실행하지 않고 다음 증감으로 가는 것.
+            }
+        </script>
+    </body>
+</html>

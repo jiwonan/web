@@ -5,51 +5,75 @@
         <style>
             body {
                 margin: 0;
+                height: 1000px;
+                width: 100%;
             }
             #container {
-                width: 99.7%;
+                width: 100%;
                 height: 100%;
                 margin: 0;
             }
             #header {
                 width: 100%;
-                height: 150px;
+                height: 20%;
                 background-color: pink;
                 text-align: center;
-                line-height: 150px;
+                line-height: 200px;
                 margin: 0;
             }
             #nav {
                 float: left;
                 width: 20%;
-                height: 350px;
+                height: 70%;
                 text-align: center;
                 background-color: rgb(231, 169, 169);
                 margin: 0;
             }
-            li {
+            #nav li {
                 width: 190px;
                 height:50px;
                 text-align: center;
                 line-height: 50px;
-                background-color: silver;
+                margin-top: 10px;
+                margin-left: -3%;
+                color: white;
+            }
+            li:link {
+                color: white;
+                text-decoration: none;
+            }
+            li:hover {
+                color: white;
+                background-color: rgb(255, 85, 85);
+                text-decoration: none;
+                border-radius: 30px;
+            }
+            li:visited {
+                color: white;
+                background-color: rgb(255, 85, 85);
+                text-decoration: none;
+                border-radius: 30px;
+            }
+            li:active {
+                color: white;
+                text-decoration: none;
             }
             #content {
                 float: left;
                 width: 59.1%;
-                height: 350px;
+                height: 70%;
                 margin: 0;
             }
             #aside {
                 float: right;
                 width: 20%;
-                height: 350px;
+                height: 70%;
                 background-color: rgb(233, 213, 213);
                 margin: 0;
             }
             #footer {
                 width: 100%;
-                height: 50px;
+                height: 10%;
                 background-color: tan;
                 margin-top: 0;
                 clear: both;
@@ -57,20 +81,36 @@
             iframe {
                 border: 0;
             }
+            #title:link {
+                color: black;
+                text-decoration: none;
+            }
+            #title:hover {
+                color: black;
+                text-decoration: none;
+            }
+            #title:visited {
+                color: black;
+                text-decoration: none;
+            }
+            #title:active {
+                color: black;
+                text-decoration: none;
+            }
         </style>
     </head>
     <body>
         <div id="container">
             <div id="header">
-                <h1>마카롱</h1>
-            </div>  
+                <h1><a href="index.html" id="title">안단단맛</a></h1>
+            </div>
             <div id="nav">
                   <ul type="none">
-                    <li>회원가입</li>
-                    <li>마이 페이지</li>
-                    <li>전체상품보기</li>
-                    <li>추천 상품</li>
-                    <li>장바구니</li>
+                    <li><a href="sign_in.html" target="content">회원가입</a></li>
+                    <li><a href="product.html" target="content">마이페이지</a></li>
+                    <li><a href="product.html" target="content">전체상품보기</a></li>
+                    <li><a href="product.html" target="content">추천상품</a></li>
+                    <li><a href="product.html" target="content">장바구니</a></li>
                 </ul>
             </div>
             <div id="content">

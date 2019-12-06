@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function print(){
+                
+                var win=window.open("","outWin","width=300, height=200");
+
+                var txt=document.getElementById("a");
+
+                win.document.open();
+                win.document.write(txt.value);
+                win.document.close();
+            }
+        </script>
+    </head>
+    <body>
+        <h3>HTML 문서 작성기 만들기</h3>
+        <hr>
+        아래에 HTML 문서를 작성하고 버튼을 클릭해보세요.<br>
+        <textarea id="a"cols="80" rows="15"></textarea><br>
+        <input type="button" value="HTML 문서 출력하기" onclick="print()">
+    </body>
+</html>

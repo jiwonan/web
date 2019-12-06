@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>계산기</title>
+        <style>
+            #center {
+                text-align: center;
+                height: 168px;
+            }
+            #left {
+                margin-left: 10px;
+                background: rgba(0, 0, 0, 0);
+            }
+            div {
+                background: rgb(192, 192, 192);
+                width: 200px;
+                height: 260px;
+                border-radius: 30px;
+            }
+            #input {
+                display: inline-block;
+                width: 100px;
+                height: 20px;
+                font-size: 15px;
+            }
+            button {
+                width: 30px;
+                height: 30px;
+                margin: 5px;
+                
+            }
+            #delete {
+                width: 76px;
+                height: 30px;
+            }
+            #Abs #Sqrt {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id = "center">
+                <span>display</span><br>
+                <input tpye="text" id = "input"><br>
+                <button type="button" onclick="calc('1')">1</button>
+                <button type="button" onclick="calc('2')">2</button>
+                <button type="button" onclick="calc('3')">3</button>
+                <button type="button" onclick="calc('/')">/</button><br>
+                <button type="button" onclick="calc('4')">4</button>
+                <button type="button" onclick="calc('5')">5</button>
+                <button type="button" onclick="calc('6')">6</button>
+                <button type="button" onclick="calc('*')">*</button><br>
+                <button type="button" onclick="calc('7')">7</button>
+                <button type="button" onclick="calc('8')">8</button>
+                <button type="button" onclick="calc('9')">9</button>
+                <button type="button" onclick="calc('-')">-</button><br>
+            </div>
+            <div id="left">
+                <button type="button" id="nocenter" onclick="calc('0')">0</button>
+                <button type="button" id="nocenter" onclick="calc('+')">+</button>
+                <button type="button" id = "delete" onclick="Delete()">←</button><br>
+                <button type="button" id = "clear" onclick="Clear()">C</button>
+                <button type="button" id = "enter" onclick="Enter()">↲</button>
+                <button type="button" id = "Abs" onclick="Abs()">abs</button>
+                <button type="button" id = "Sqrt" onclick="SQrt()">sqrt</button>
+            </div>
+        </div>
+        <script>
+            var text;
+            function calc(gap) { 
+                text = document.getElementById("input").value;
+                text+=gap;
+                document.getElementById("input").value=text;
+            }
+            function Clear() {
+                text = text.substring(0,0);
+                document.getElementById("input").value=text;
+            }
+            function Enter() {
+                var sum = eval(document.getElementById("input").value);
+                document.getElementById("input").value=sum;
+                calc('');
+            }
+            function Delete() {
+                var text1 = text.substring(0,text.length-1);
+                document.getElementById("input").value=text1;
+                text=text1;
+            }
+            function Abs() {
+                var result = eval(document.getElementById("input").value);
+                text = Math.abs(result);
+                document.getElementById("input").value=text;
+            }
+            function SQrt() {
+                var result = eval(document.getElementById("input").value);
+                text = Math.sqrt(result);
+                document.getElementById("input").value=text;
+            }
+        </script>
+    </body>
+</html>

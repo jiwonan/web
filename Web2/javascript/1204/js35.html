@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>문서의 동적 구성</title>
+        <style>
+            input {
+                background: salmon;
+                border: 0 none;
+                color: white;
+                border-radius: 50px;
+                width: 40px;
+                height: 30px;
+            }
+            input:hover {
+                background: rgb(194, 98, 87);
+            }
+            input:active {
+                background:rgb(252, 177, 169);
+            }
+        </style>
+    </head>
+    <body>
+        <img src = "../../../HTML/img/lion01.PNG" id = "myimg" width="150px" height="150px"><br>
+        <input type="button" name="" value="클릭" onclick="change()">
+        <script>
+            function change() {
+                var img = document.getElementById("myimg");
+                img.src="lion02.png";
+                img.width=150;
+                img.height=150;
+                alert("크기: "+img.width+", 높이: "+img.height)
+            }
+        </script>
+    </body>
+</html>

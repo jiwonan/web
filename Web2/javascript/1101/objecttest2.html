@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>생성자 사용해서 객체 생성</title>
+    </head>
+    <body>
+        <h3>객체에 메서드 추가</h3>
+        <hr>
+        <script>
+            function Student(name, score){
+                this.name = name;
+                this.score = score;
+                this.getGrade = function(){
+                    if(this.score>=80) return 'A';
+                    else return 'F';
+                }
+            }
+            var kim = new Student('kim',88);
+            var lee = new Student('lee',70);
+            document.write(kim.name+", "+kim.getGrade()+"<br>");
+            document.write(lee.name+", "+lee.getGrade());
+        </script>
+    </body>
+</html>

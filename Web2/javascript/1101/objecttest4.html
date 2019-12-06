@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>객체 연습</title>
+    </head>
+    <body>
+        <h3>객체 연습</h3>
+        <hr>
+        <script>
+            var car1 = {
+                model : '람보르기니',
+                speed : 80,
+                color : 'red',
+                brake : function() { this.speed = 0; },
+                accel : function() { this.speed+=10; }
+            }
+            function Car(model, speed, color){
+                this.model = model;
+                this.speed = speed;
+                this.color = color;
+                function brake() { this.speed = 0; };
+                function accel() { this.speed+=10; };
+            }
+            var car2 = new Car('포르쉐',90,'black');
+            document.write(car1.model+"의 속도 : "+car1.speed+"<br>");
+            document.write(car2.model+"의 속도 : "+car2.speed);
+        </script>
+    </body>
+</html>

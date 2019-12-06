@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onclick/dbclick</title>
+    </head>
+    <body>
+        <h3>마우스 관련 이벤트 리스너</h3>
+        <hr>
+        <p>마우스 관련
+            <span onmousedown="down(this)"
+            onmouseup="up(this)"
+            onmouseover="over(this)"
+            onmouseleave="leave(this)"
+            onwheel="wheel(event,this)">이벤트</span>
+        가 발생합니다.</p>
+        <script>
+            function over(span) {
+                span.style.fontSize = "30px";
+            }
+            function leave(span) {
+                span.style.fontSize = "15px";
+                span.style.color = "black";
+            }
+            function wheel(e,span) {
+                if(e.wheelDelta<0){
+                    console.log("아래로 굴림");
+                }
+                else if(e.wheelDelta>0){
+                    console.log("위로 굴림");
+                }
+            }
+            function down(span) {
+                span.style.color = "red";
+            }
+            function up(span) {
+                span.style.color = "pink";
+            }
+        </script>
+    </body>
+</html>

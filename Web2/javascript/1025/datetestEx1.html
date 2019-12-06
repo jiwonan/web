@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var now = new Date();
+            var color;
+            document.write("<h3>오전이면 오렌지 오후면 살먼</h3>");
+            document.write("<hr>");
+            document.write("현재 시간 : "+now.getHours()+"시,"+now.getMinutes()+"분,"+now.getSeconds()+"초");
+            if(now.getHours() > 12){
+                color="salmon";
+            }
+            else {
+                color="orange";
+            }
+            document.body.style.background=color;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var bookArray = new Array(2);
+            var expensive;
+            for(var i = 0;i<2;i++) {
+                var book = new Object();
+
+                var input=prompt(); // a, b, 100
+                var info = input.split(','); // info는 배열. info[0] = 'a', info[1] = 'b', info[2] = 100;
+
+                book.title = info[0];
+                book.author = info[1];
+                book.price = parseInt(info[2]);
+
+                bookArray[i]=book;
+                document.write("책 이름 : "+bookArray[i].title+", 저자 : "+bookArray[i].author+", 가격 : "+bookArray[i].price+"<br>");
+            }
+            var max = bookArray[0];
+            for(var i = 1;i < bookArray.length;i++) {
+                if(max.price < bookArray[i].price) {
+                    max = bookArray[i];
+                }
+            }
+            document.write("<br>");
+            document.write("가장 가격이 비싼 책은 "+max.title);
+        </script>
+    </body>
+</html>

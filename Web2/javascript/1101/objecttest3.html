@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var account = {
+                owner : 'kim',
+                code : 111,
+                balance : 3500,
+                deposit : deposit, // deposit : function() { }
+                withdraw : withdraw
+            }
+            function deposit(m) {
+                this.balance+=m;
+                return this.balance;
+            }
+            function withdraw(m) {
+                this.balance-=m;
+                return this.balance;
+            }
+            account.deposit(100);
+            for(var key in account) {
+                document.write(account[key]+"<br>");
+            }
+            document.write("<br>");
+
+            document.write(account.owner);
+            
+        </script>
+    </body>
+</html>

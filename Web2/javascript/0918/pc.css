@@ -1,0 +1,4 @@
+.left, .right{position:absolute;top:0;width:100px;height:300px;}
+.left{left:0;background-color:skyblue;}
+.right{right:0;background-color:violet;}
+.center{height:300px;background-color:rgb(37,66,49);}

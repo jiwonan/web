@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>onclick/dbclick</title>
+    </head>
+    <body>
+        <h3>onclick, 계산기 만들기</h3>
+        <hr>
+        <p>계산하고자 하는 수식을 입력하고 계산 버튼을 눌러봐요.</p>
+        식<input type = "text" id="sik"><br>
+        값<input type="text" id = "result">
+        <button type="button" onclick="calc()">계산</button>
+        <script>
+            function calc() {
+                var text = document.getElementById("sik").value;
+                var text1 = eval(text);
+                document.getElementById("result").value=text1;
+            }
+        </script>
+    </body>
+</html>

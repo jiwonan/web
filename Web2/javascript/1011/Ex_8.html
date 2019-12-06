@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Up & Down Game</title>
+    </head>
+    <body>
+        <h2>숫자 맞추기</h2>
+        <p>이 게임은 컴튜터가 생성한 숫자를 맞추는 게임입니다.<br>
+        수샂는 1부터 100사이에 있습니다.</p>
+        <form>
+            <label>숫자 : <input type="text" id="x"></label><input type="button" value="입력" onclick="guess()"></input><br>
+            추측 횟수 : <input type="text" id = "y"><br>    
+            힌트 : <input type="text" id="sum">
+        </form>
+        <script>
+            var compu_value=53;
+            var count=0;
+            function guess() {
+                count++;
+                var user_value =document.getElementById("x").value;
+                if(count>5){
+                    document.getElementById("sum").value="횟수 초과입니다.";
+                }
+                else {
+                    document.getElementById("y").value=count;
+                    if(user_value>compu_value){
+                        document.getElementById("sum").value="Down!";
+                        console.log(count);
+                    }
+                    else if(user_value<compu_value){
+                        document.getElementById("sum").value="Up!";
+                    }
+                    else {
+                        document.getElementById("sum").value="정답!";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+            <h3>과일의 가격</h3>
+            <hr>
+            <script>
+                function result() {
+                    var f = document.getElementById("fruit").value;
+                    switch(f){
+                        case "apple" : var price = 4000; break;
+                        default : var price = "가격을 알 수 없습니다.";
+                    }
+                    document.getElementById("result").value = price;
+                }
+            </script>
+            <input type="text" id="fruit">
+            <button type="button" onclick="result()">가격 확인</button>
+            <input type="text" id="result">
+    </body>
+</html>

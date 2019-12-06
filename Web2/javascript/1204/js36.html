@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body onload="change()">
+    <h3>onload로 이미지 크기 출력</h3>
+    <hr>
+    <select id="sel" onchange="change()">
+        <option value="../../img/elsa.jpg">엘사</option>
+        <option value="../../img/anna.jpg">안나</option>
+        <option value="../../img/bruny.jpg">브루니</option>
+    </select>
+    <span id="info">이미지 크기</span><br>
+    <img src="../../img/elsa.jpg" id="myimg" width="300px" height="auto">
+    <script>
+        function change() {
+            var wh = document.getElementById("info");
+            var sel = document.getElementById("sel");
+            var imga = document.getElementById("myimg");
+            imga.src = sel.options[sel.selectedIndex].value;
+            wh.innerHTML = imga.width + "X" + imga.height;
+        }
+    </script>
+</body>
+
+</html>

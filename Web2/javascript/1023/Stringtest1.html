@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var a = new String("Boys And Girls");
+            var b = "!!";
+            document.write("a : "+a+"<br>"); // Boys and Girls
+            document.write("b : "+b+"<br><hr>"); // !!
+
+            document.write(a.charAt(0)+"<br>"); // B
+            document.write(a.concat(b,"입니다")+"<br>"); // Boys and Girls!!입니다
+            document.write(a.indexOf("s")+"<br>"); // 3 찾는 글자가 없으면 -1 리턴
+            document.write(a.indexOf("And")+"<br>"); // 5
+            document.write(a.slice(5,8)+"<br>"); // And
+            document.write(a.substr(5,3)+"<br>"); // And
+            document.write(a.toUpperCase()+"<br>"); // BOYS AND GIRLS
+            document.write(a.replace("And","Or")+"<br>"); // Boys Or Girls
+            document.write("    jim     ".trim()+"<br><hr>"); // jim
+
+            var sub=a.split("  ");
+            document.write("a를 빈칸으로 분리<br>");
+            for(var i =0;i<sub.length;i++){
+                document.write("sub"+i+"="+sub[i]+"<br>"); // Boys And Girls
+            }
+
+            document.write("<hr>String 메소드를 실행 후 a와 b 변함 없음<br>");
+            document.write("a : "+a+"<br>"); // Boys And Girls
+            document.write("b : "+b+"<br>"); // !!
+        </script>
+    </body>
+</html>

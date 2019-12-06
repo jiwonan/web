@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>라면을 끓이는 순서</title>
+    </head>
+    <body>
+        <h3>라면을 끓이는 순서</h3>
+        <hr>
+        <ol>
+            <li>물을 끓인다.</li>
+            <li>라면과 스프를 넣는다.</li>
+            <li>파를 썰어 넣는다.</li>
+            <li>5분후 <span id="bold">맛있게</span> 먹는다.</li>
+        </ol>
+        <script>
+            var Tag = document.getElementsByTagName("li");
+            var bold = document.getElementById("bold");
+            bold.style.fontWeight = "bold";
+            for(var i = 0;i<Tag.length;i++){
+                Tag[i].style.color = "green";
+            }
+        </script>
+    </body>
+</html>

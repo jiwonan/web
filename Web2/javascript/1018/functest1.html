@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var sum;
+            var x=prompt("첫 번째 값을 입력하시오.","");
+            var y=prompt("두 번째 값을 입력하세요.","");
+            var a=parseInt(x);
+            var b=parseInt(y);
+            function add() {
+                sum=a+b;
+                document.getElementById("result").value=sum;
+            }
+        </script>
+        <h4>합 구하기</h4>
+        <hr>
+        <input type="button" onclick="add()" value="입력한 값의 합은?">
+        <input type="text" id="result">
+    </body>
+</html>

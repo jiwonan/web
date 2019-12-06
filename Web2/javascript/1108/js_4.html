@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>innerHTML 활용 : 아래 글자에 클릭하면 예쁜 강아지가 보입니다.</h3>
+        <hr>
+        <p style="color:blue" id="p">여기에 <span id="myspan" onclick="click1()">클릭하세요</span></p>
+        <script>
+            var p = document.getElementById("p");
+            var span = document.getElementById("myspan");
+            span.style.color="red";
+            function click1() {
+                var p = document.getElementById("p");
+                var span = document.getElementById("myspan");
+                p.innerHTML = "나의 <img src='lion01.png' width = '150px' height = '150px'> 라이언"; 
+            }
+        </script>
+    </body>
+</html>

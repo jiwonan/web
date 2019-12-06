@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+        <h3>커피프린스 2호점</h3>
+        <hr>
+        <script>
+            function result() {
+                var menu = document.getElementById("score").value;
+                var price;
+                switch(menu){
+                    case "아메리카노" : price = 5000; break;
+                    case "카페라떼" : price = 5000; break;
+                    case "비엔나라떼" : price = 5000; break;
+                    case "카라멜라떼" : price = 5000; break;
+                    case "바닐라라떼" : price = 5000; break;
+                    case "민트초코라떼" : price = 5000; break;
+                    case "카푸치노" : price = 5000; break;
+                    case "카라멜모카" : price = 5000; break;
+                    case "바닐라모카" : price = 5000; break;
+                    case "헤이즐넛모카" : price = 5000; break;
+                    case "화이트초코모카" : price = 5000; break;
+                    case "민트초코모카" : price = 5000; break;
+                    case "카라멜마끼아또" : price = 5000; break;
+                    case "에스프레소" : price = 5000; break;
+                    case "에스프레소 콘파냐" : price = 5000; break;
+                    case "에스프레소 마끼아또" : price = 5000; break;
+                    default : price = "가게에 있는 메뉴를 고르세요.";
+                }
+                document.getElementById("result").value = price;
+            }
+        </script>
+        <img src="../../img/cafe.GIF" width="150px" height="auto">
+        <br>
+        <input type="text" id="score">
+        <button type="button" onclick="result()">가격 확인</button>
+        <input type="text" id="result"> 
+</body>
+</html>

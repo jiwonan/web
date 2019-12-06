@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            span {
+                visibility: hidden;
+                color: brown;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>다음 빈 곳에 숨은 단어?</h3>
+        <button onclick="show_hide()">show/hide</button>
+        <hr>
+        <ul>
+            <li>뭉쳐야 ( <span>찬다</span> )</li>
+            <li>김요한 ( <span>요정</span> )</li>
+            <li>응답하라 ( <span>1988</span> )</li>
+        </ul>
+        <script>
+            function show_hide() {
+                var spanTag = document.getElementsByTagName("span");
+                for(var i = 0;i<spanTag.length;i++){
+                    var style = window.getComputedStyle(spanTag[i]);
+                    var txt = style.getPropertyValue('visibility');
+                    if(txt=='hidden'){
+                        spanTag[i].style.visibility = "visible";
+                    }
+                    else {
+                        spanTag[i].style.visibility = "hidden";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

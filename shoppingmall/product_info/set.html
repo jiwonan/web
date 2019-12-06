@@ -6,25 +6,53 @@
             img {
                 float: left;
                 margin-right: 20px;
+                width: 350px;
+                height: auto;
+                margin-top: 20px;
+            }
+            hr {
+                border: 2px solid rgb(255, 95, 95);
+            }
+            #left {
+                width: 120px;
+                height: 50px;
+            }
+            #right {
+                width: 250px;
+                height: 50px;
+            }
+            #bt1 {
+                background-color: rgb(255, 95, 95);
+                border: 0px;
+                width: 70px;
+                height: 30px;
+                border-radius: 20px;
+            }
+            #bt2 {
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(255, 95, 95);
+                width: 70px;
+                height: 30px;
+                border-radius: 20px;
             }
         </style>
     </head>
     <body>
         <img src="../img/andandanmat_set.GIF" width="300px" height="auto">
-        <h3>세트</h3>
+        <h3>마카롱 세트</h3>   
         <hr>
         <table>
             <tr>
-                <td>판매가</td>
-                <td>6.0 ~ 20.0</td>
+                <td id="left">판매가</td>
+                <td id="right">6.0 ~ 20.0</td>
             </tr>
             <tr>
-                <td>상품코드</td>
-                <td>Y123121</td>
+                <td id="left">상품코드</td>
+                <td id="right">Y123121</td>
             </tr>
             <tr>
-                <td>세트 선택</td>
-                <td>
+                <td id="left">세트 선택</td>
+                <td id="right">
                     <select name="price">
                         <option value="set_1">3개 6.0</option>
                         <option value="set_1">4개 8.0</option>
@@ -32,10 +60,20 @@
                         <option value="set_1">10개 20.0</option>
                     </select>
                 </td>
-                <tr>
-                    <td>구매수량</td>
-                    <td><input type="range"></td>
-                </tr>
+            </tr>
+            <tr>
+                <td id="left">구매수량</td>
+                <td id="right"><input type="number" min="1" max="999" value="1"></td>
+            </tr>
+            <tr>
+                <td id="left">배송비</td>
+                <td id="right">3000원 [10.0원 부터 무료배송]</td>
+            </tr>
+            <tr>
+                <td colspan="2"><center>
+                    <input type="button" value="장바구니" name="shopping_basket" id="bt1">&nbsp;&nbsp;&nbsp;
+                    <input type="button" value="구매하기" name="shopping_basket" id="bt2"></center>
+                </td>
             </tr>
         </table>
     </body>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>라면을 먹어봅시다</h3>
+        <hr>
+        <p onclick="input()" id="t">제일 맛있는 라면은 무엇일까요?</p>
+        <script>
+            function input() {
+                var show = document.getElementById("t");
+                var text = prompt("텍스트를 입력하세요","");
+                show.innerHTML = text;
+                show.style.background="salmon";
+                show.style.width = (text.length*15)+"px";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Object 연습1</title>
+    </head>
+    <body>
+        <script>
+            money=3500;
+            var account = new Object();
+            account.owner='kim';
+            account.code=111;
+            account.balance = 3500;
+            account.deposit=deposit;
+            account.withdraw=withdraw;
+            function deposit(m) {
+                this.balance+=m;
+                return this.balance;
+            }
+            function withdraw(m) {
+                this.balance-=m;
+                return this.balance;
+            }
+            account.deposit(100);
+            for(var key in account) {
+                console.log(account[key]);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>문제2번</h3>
+        <hr>
+        <div id = "first">
+            <p>Q.제일 자신 있는 언어는?</p>
+            <button onclick="addAnswer(this,'한국어')">답보기</button>
+        </div>
+        <div id = "second">
+            <p>Q. 크리스마스 이브는 무슨 요일?</p>
+            <button onclick="addAnswer(this,'화요일')">답보기</button>
+        </div>
+        <script>
+            function addAnswer(test, answer) {
+                if (answer == "한국어") {
+                    var parent1 = document.getElementById("first");
+                }
+                else {
+                    var parent1 = document.getElementById("second");
+                }
+                var answer1 = document.createElement("div");
+                answer1.innerHTML = answer;
+                parent1.appendChild(answer1);
+                
+                answer1.onclick=function() {
+                    var parent = this.parentElement;
+                    parent.removeChild(this);
+                }
+            }
+        </script>    
+    </body>
+</html>

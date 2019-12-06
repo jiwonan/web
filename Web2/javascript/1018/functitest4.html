@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var num = new Array();
+            for(var i=0;i<5;i++){
+                num[i]=parseInt(prompt((i+1)+"번째 숫자 입력",""));
+            }
+            var big=0;
+            var arr=function(n){
+                for(var i=0;i<5;i++){
+                    if(big<n[i]){
+                        big=n[i];
+                    }
+                }
+                return big;
+            }
+            var result = arr(num);
+            document.write("입력한 값 중 최댓값 : "+result);
+        </script>
+    </body>
+</html>

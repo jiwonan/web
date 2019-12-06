@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h3>이미지 슬라이드</h3>
+    <hr>
+    <img src="../../img/elsa.jpg" id="myimg" onclick="change()">
+    <script>
+        var count = 0;
+
+        function change() {
+            count++;
+            var files = ['../../img/elsa.jpg', '../../img/anna.jpg', '../../img/bruny.jpg'];
+            var img = new Array();
+            for (var i = 0; i < files.length; i++) {
+                img[i].src = files[i];
+            }
+        }
+    </script>
+</body>
+
+</html>

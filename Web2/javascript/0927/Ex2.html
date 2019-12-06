@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>너의 등급은 .. </h3>
+        <hr>
+        <script>
+            function result() {
+                var jumsu = document.getElementById("score").value;
+                var j =parseInt(jumsu);
+                var grade;
+                if(jumsu<=100&&jumsu>=90){
+                    grade='A';
+                }
+                else if(jumsu>=80&&jumsu<90){
+                    grade='B';
+                }
+                else if(jumsu>=70&&jumsu<80){
+                    grade='C';
+                }
+                else if(jumsu>=60&&jumsu<70){
+                    grade='D';
+                }
+                else if (jumsu>=0&&jumsu<60) {
+                    grade='F';
+                }
+                else {
+                    grade = "100 - 0 사이의 점수를 입력하세요." 
+                }
+                document.getElementById("result").value = grade;
+            }
+        </script>
+        <input type="text" id="score">
+        <button type="button" onclick="result()">등급 확인</button>
+        <input type="text" id="result">
+    </body>
+</html>

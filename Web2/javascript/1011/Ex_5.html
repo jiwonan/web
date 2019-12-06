@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var date = prompt("월화수목금토일중 하나 입력","");
+            switch(date) {
+                case "월": case "화": case "수" : case "목" : case "금" : document.write("출근!"); break;
+                case "토" : case "일" : document.write("휴일!"); break;
+                default : document.write("요일을 입력해주세요.");
+            }
+        </script>
+        <br>
+    </body>
+</html>

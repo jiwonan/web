@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            document.write("<h3>1부터 100사이의 난수 10개를 생성하여 배열에 저장하고 배열에 저장된 수중 가장 큰 수를 출력</h3>");
+            document.write("<hr>");
+            var big = 0;
+            var arr = new Array(10);
+            for(var i = 0;i<10;i++){
+                arr[i]=Math.floor(Math.random()*100+1);
+                document.write(arr[i]+" ");
+                if(big<arr[i]){
+                    big=arr[i];
+                }
+            }
+            document.write("<hr>");
+            document.write("<h3>제일 큰 수</h3>");
+            document.write(big);
+            document.write("<hr>");
+            for(var i = 0;i<10;i++){
+                for(var j = i+1;j<10;j++){
+                    if(arr[i]>arr[j]){
+                        var temp=arr[i];
+                        arr[i]=arr[j];
+                        arr[j]=temp;
+                    }
+                }
+            }
+            for(var i = 0;i<10;i++){
+                document.write(arr[i]+" ");
+            }
+        </script>
+    </body>
+</html> 

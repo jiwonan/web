@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function pr(msg, arr){
+                document.write(msg+arr.toString()+"<br>");
+            }
+            var a = new Array("kim","lee","park");
+            var b = new Array("chang");
+            var c;
+            pr("배열 a = ",a); // 배열 a = kim,lee,park
+            pr("배열 b = ",b); // 배열 b = chang
+            document.write("<hr>");
+
+            c = a.concat(b);
+            pr("c = a.concat(b)후 c = ",c); // c = a.concat(b)후 c = kim,lee,park,chang
+            pr("c = a.concat(b)후 a = ",a); // c = a.concat(b)후 a = kim.,lee,park
+
+            c = a.join("##");
+            pr("c = a.join('##')후 c = ",c); // c = a.join('##')후 c = kim##lee##park
+            pr("c = a.join('##')후 a = ",a); // c = a.join('##')후 a = kim,lee,park
+
+            c = a.reverse(); // a가 변경, c는 배열이 됨.
+            pr("c = a.reverse()후 c = ",c); // c = a.reverse()후 c = park,lee,kim
+            pr("c = a.reverse()후 a = ",a); // c = a.reverse()후 a = park,lee,kim
+
+            c = a.slice(1,2);
+            pr("c = a.slice(1,2)후 c = ",c); // c = a.slice(1,2)후 c = lee
+            pr("c = a.slice(1,2)후 a = ",a); // c = a.slice(1,2)후 a = park,lee,kim
+
+            c = a.sort(); // a가 변경
+            pr("c = a.sort()후 c = ",c); // c = a.sort()후 c = kim,lee,park
+            pr("c = a.sort()후 a = ",a); // c = a.sort()후 a = kim,lee,park
+
+            c = a.toString();
+            pr("c = a.toString()후 c = ",c); // c = a.toString()후 c = kim,lee,park
+            pr("c = a.toString()후 c = ",a); // c = a.toString()후 a = kim,lee,park
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            document.write("<h3>prompt함수로 정수 5개를 입력받아 배열에 저장하고 반대순으로 출력</h3>");
+            document.write("<hr>");
+            var arr = new Array(5);
+            document.write("입력된 수의 배열<br>");
+            for(var i = 0;i<arr.length;i++){
+                arr[i]=prompt("정수 입력","");
+                document.write(arr[i]+" ");
+            }
+            var arr1 = new Array(5);
+            document.write("<hr>");
+            document.write("역순으로 정렬된 배열<br>");
+            for(var i =0;i<arr.length;i++){
+                arr1[i]=arr[arr.length-1-i];
+                document.write(arr1[i]+" ");
+            }
+            document.write("<br>");
+            var arr2 = arr.reverse();
+            for(var i = 0;i<arr.length;i++){
+                document.write(arr2[i]+" ");
+            }
+        </script>
+    </body>
+</html>

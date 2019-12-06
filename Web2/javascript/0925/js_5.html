@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            /* document.write("<h2>Hello Js</h2>");
+            document.write("<font color='red'>World</font>")
+            console.log("hello world");
+
+            document.write("<h1>Welcome!</h1>");
+            document.write("<h2>3 + 5 = </h2>");
+            document.write("<h3>8입니다.</h3>"); */
+
+            // var uid = prompt("이 아이디를 입력하세요.", "홍길동");
+            // uid == null 취소버튼이나 다이알로그 창을 닫음.
+            // uid == "" 입력되지 않음.
+            // uid == 값이 있으면 이 값을 출력.
+            /* if (uid == null){
+                alert("취소버튼을 눌렀습니다.");
+            }
+            else if ( uid == ""){
+                alert("값이 입력되지 않았습니다.");
+            }
+            else {
+                document.write("사용자 아이디 : "+uid);
+            }
+            console.log(uid);
+
+            document.write("<br>");
+            var age = prompt("나이를 입력하세요.", "");
+            var ageI = parseInt(age);
+            document.write("나이 : "+(ageI+20)+"세"); */
+
+            var exit = confirm("종료하시겠습니까?");
+            if(exit == null){
+                alert("창을 닫으셨습니다.^!^");
+            }
+            else if(exit == true){
+                alert("확인을 누르셨습니다.");
+            }
+            else {
+                alert("취소를 누르셨습니다.");
+            }
+
+            alert("경고창입니다.");
+        </script>
+    </body>
+</html>

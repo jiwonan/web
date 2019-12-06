@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var now = new Date();
+            var color;
+            var day;
+            document.write("<h3>일요일이면 오렌지 아니면 살먼</h3>");
+            document.write("<hr>");
+            var d = now.getDay();
+            switch(d){
+                case 1: color = "salmon"; day="월"; break; 
+                case 2: color = "salmon"; day="화"; break; 
+                case 3: color = "salmon"; day="수"; break; 
+                case 4: color = "salmon"; day="목"; break; 
+                case 5: color = "salmon"; day="금"; break; 
+                case 6: color = "salmon"; day="토"; break; 
+                case 0: color = "orange"; day="일"; break;
+                default: break;
+            }
+            document.write("오늘 : "+now.getDate()+"일,"+day+"요일");
+            document.body.style.background=color;
+        </script>
+    </body>
+</html>

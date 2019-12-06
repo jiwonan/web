@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body onload=init()>
+        <script>
+            function init() {
+                var p = document.getElementById("p");
+                p.addEventListener('mouseover',function() {
+                    document.body.style.backgroundColor = "green";
+                });
+                p.addEventListener("mouseout",out);
+                function out() {
+                    document.body.style.backgroundColor = "red";
+                }
+            }
+        </script>
+        <p id = "p">마우스 올리면 배경색 바뀌는 이벤트 발생</p>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var book1 = {
+                title : "해리포터",
+                author : "J.K 롤링",
+                price : 18000,
+                read : read1(),
+                buy : buy1()
+            }
+            function read1() {
+                document.write("해리포터를 읽고 있습니다.<br>");
+            }
+            function buy1() {
+                document.write("해리포터를 샀습니다.<br>");
+            }
+            var book2 = new Object();
+            book2.title = "장수 고양이의 비밀";
+            book2.author = "무라카미 하루키";
+            book2.price = 14000;
+            book2.read2 = function(){
+                // document.write(book2.title+"을 읽고 있습니다.<br>");
+            }
+            book2.buy2 = function() {
+                // document.write(title+"을 샀습니다. "+price+"원 입니다.<br>");
+            }
+            function Book(title, author, price) {
+                this.title=title;
+                this.author=author;
+                this.price=price;
+                function read3() { document.write("스튜디오 짭쪼롬을 읽고 있습니다.<br>"); };
+                function buy3 () { document.write("스튜디오 짭쪼롬을 샀습니다.<br>"); };
+            }
+            var book3 = new Book("스튜디오 짭쪼롬","오묘",10800);
+            book1.read1();
+            book1.buy1();
+            book2.read2();
+            book2.buy2();
+            book3.read3();
+            book3.buy3();
+        </script>
+    </body>
+</html>

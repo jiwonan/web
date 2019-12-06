@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body id="bo">
+        <form method="post">
+            <input type="radio" name = "c1" onclick="changeColor('green')">녹색
+            <input type="radio" name = "c1" onclick="changeColor('red')">빨강
+        </form>
+        <script>
+            function changeColor(color) {
+                var bd = document.getElementById("bo");
+                bd.style.background = color;
+            }
+        </script>
+    </body>
+</html>

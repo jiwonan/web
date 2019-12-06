@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>연습문제 4</title>
+    </head>
+    <body>
+        <script>
+            var sum = 0;
+            var cnt = 0;
+            for ( var i = 0 ; i <= 999 ; i++ ) {
+                if ( i % 4 != 0 ) {
+                    sum += i;
+                    cnt++;
+                }
+            }
+            document.write("4의 배수가 아닌 수의 갯수는 "+cnt+"개<br>");
+            document.write("4의 배수가 아닌 수의 합계 : "+sum);
+        </script>
+    </body>
+</html>

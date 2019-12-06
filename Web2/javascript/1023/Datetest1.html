@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>Date 객체로 현재 시간 알아내기</h3>
+        <hr>
+        <script>
+            var now = new Date();
+            var n;
+            if(now.getHours() < 12) {
+                n = "오전";
+            }
+            else {
+                n="오후";
+            }
+            document.write("현재 시간 : "+now.getFullYear()+". "+(now.getMonth()+1)+". "+now.getDate()+". "+n+" "+now.getHours()+":"+now.getMinutes()+":"+now.getMilliseconds()+"<hr>");
+            document.write(now.getFullYear()+"년도<br>");
+            document.write((now.getMonth()+1)+"월<br>");
+            document.write(now.getDate()+"알<br>");
+            document.write(now.getHours()+"시<br>");
+            document.write(now.getMinutes()+"분<br>");
+            document.write(now.getSeconds()+"초<br>");
+            document.write(now.getMilliseconds()+"밀리초<hr>");
+            document.write("now.toLocalString() : "+now.toLocaleString());
+        </script>
+    </body>
+</html>
