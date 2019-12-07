@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            function click1() {
+                var a = document.getElementsByName("animal");
+                for(var i=0;i<a.length;i++){
+                    if(a[i].checked == true){
+                        console.log(a[i].value);
+                        break;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>버튼을 클릭하면 선태고딘 라디오 버튼의 value를 출력합니다.</h3>
+        <hr>
+        <input type="radio" name = "animal" value = "dog">개
+        <input type="radio" name = "animal" value = "cow">소
+        <input type="radio" name = "animal" value = "horse">말
+        <input type="button" onclick="click1()" value="선택">
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script>
+            var money = 0;
+            function calc(obj) {
+                var a = document.getElementsByTagName("input");
+                switch(obj) {
+                    case "모자":
+                    if(a[0].checked==true){
+                        money+=10000;
+                    }
+                    else money-=10000;
+                    break;
+                    case "신발":
+                    if(a[1].checked==true){
+                        money+=30000;
+                    }
+                    else money-=30000;
+                    break;
+                    case "가방":
+                    if(a[2].checked==true){
+                        money+=80000;
+                    }
+                    else money-=80000;
+                    break;
+                }
+                document.getElementById("result").value=money;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>자동 계산</h3>
+        <hr>
+        <input type="checkbox" name = "hat" value = "모자" onclick="calc('모자')">모자 1만원
+        <input type="checkbox" name = "shoose" value = "신발" onclick="calc('신발')">구두 3만원
+        <input type="checkbox" name = "bag" value = "가방" onclick="calc('가방')">명품가방 8만원<br>
+        지불하실 금액<input type="text" id = "result">
+    </body>
+</html>

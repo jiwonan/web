@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <title></title>
-</head>
-
-<body>
-    <h3>이미지 슬라이드</h3>
-    <hr>
-    <img src="../../img/elsa.jpg" id="myimg" onclick="change()">
-    <script>
-        var count = 0;
-
-        function change() {
-            count++;
-            var files = ['../../img/elsa.jpg', '../../img/anna.jpg', '../../img/bruny.jpg'];
-            var img = new Array();
-            for (var i = 0; i < files.length; i++) {
-                img[i].src = files[i];
+    <head>
+        <title></title>
+        <style>
+            img {
+                border: 3px dotted salmon;
             }
-        }
-    </script>
-</body>
-
+        </style>
+        <script>
+            var count = 0;
+            var files = ['../../img/elsa.jpg', '../../img/anna.jpg', '../../img/bruny.jpg'];
+            var img1 = new Array();
+            for (var i = 0; i < files.length; i++) {
+                    img1[i] = new Image();
+                    img1[i].src = files[i];
+                }
+            function change() {
+                document.getElementById("myimg").src = img1[count].src;
+                count++;
+                count %= files.length;
+            }
+        </script>
+    </head>
+    <body onload="change()">
+        <h3>이미지 슬라이드</h3>
+        <hr>
+        <img src="../../img/Frozen2.jpg" id="myimg" onclick="change()">
+    </body>
 </html>
