@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>계산기 만들기</h3>
+        <hr>
+        <p>수식을 입력하고, enter를 입력하세요.</p>
+        <label>식<input type="text" id="inputbox" onkeydown="javascript:calc()"></label><br>
+        <label>값<input type="text" id="result"></label>
+        <script>
+            function calc() {
+                if(event.keyCode == 13) {
+                    var r = eval(document.getElementById("inputbox").value);
+                    document.getElementById("result").value=r;
+                }
+                else if(event.keyCode == 67) {
+                    document.getElementById("result").value="";
+                    var str = document.getElementById("inputbox").value;
+                }
+            }
+        </script>
+    </body>
+</html>

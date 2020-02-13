@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>계산기</title>
+    </head>
+    <body>
+        <h3>계산기 만들기</h3>
+        <hr>
+        <input type="text" id = "input">
+        <table>
+            <tr>
+                <td><button tpye="button" onclick="Delete()">BACK</button></td>
+                <td><button tpye="button" onclick="Clear()">CE</button></td>
+                <td><button tpye="button" onclick="Clear()">C</button></td>
+                <td><button tpye="button" onclick="Enter()">=</button></td>
+            </tr>
+            <tr>
+                <td><button tpye="button" onclick="calc('7')">7</button></td>
+                <td><button tpye="button" onclick="calc('8')">8</button></td>
+                <td><button tpye="button" onclick="calc('9')">9</button></td>
+                <td><button tpye="button" onclick="calc('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button tpye="button" onclick="calc('4')">4</button></td>
+                <td><button tpye="button" onclick="calc('5')">5</button></td>
+                <td><button tpye="button" onclick="calc('6')">6</button></td>
+                <td><button tpye="button" onclick="calc('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button tpye="button" onclick="calc('1')">1</button></td>
+                <td><button tpye="button" onclick="calc('2')">2</button></td>
+                <td><button tpye="button" onclick="calc('3')">3</button></td>
+                <td><button tpye="button" onclick="calc('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button tpye="button" onclick="calc('0')">0</button></td>
+                <td><button tpye="button" onclick="calc('+')">+</button></td>
+                <td><button tpye="button" onclick="SQRT()">ROOT</button></td>
+                <td><button tpye="button" onclick="ABS()">ABS</button></td>
+            </tr>
+        </table>
+        <script>
+            var text;
+            function calc(gap) { 
+                text = document.getElementById("input").value;
+                text+=gap;
+                document.getElementById("input").value=text;
+            }
+            function Clear() {
+                text = text.substring(0,0);
+                document.getElementById("input").value=text;
+            }
+            function Enter() {
+                var sum = eval(document.getElementById("input").value);
+                document.getElementById("input").value=sum;
+                calc('');
+            }
+            function Delete() {
+                var text1 = text.substring(0,text.length-1);
+                document.getElementById("input").value=text1;
+                text=text1;
+            }
+            function ABS() {
+                var result = eval(document.getElementById("input").value);
+                text = Math.abs(result);
+                document.getElementById("input").value=text;
+            }
+            function SQRT() {
+                var result = eval(document.getElementById("input").value);
+                text = Math.sqrt(result);
+                document.getElementById("input").value=text;
+            }
+        </script>
+    </body>
+</html>

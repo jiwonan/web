@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>과일 출력</h3>
+        <hr>
+        <p>과일을 선택하면 이미지가 출력됩니다.</p>
+        <select name = "f" id="fruit" onchange="func()">
+            <option value = "apple">사과</option>
+            <option value = "banana">바나나</option>
+            <option value = "strawbarry">딸기</option>
+        </select>
+        <br>
+        <img src = "../../img/Frozen2.jpg" width = "300px" height = "auto" id="myimg">
+        <script>
+            var files = ['../../img/Apple.jpeg','../../img/Banana.jpg','../../img/StrawBarry.jpg'];
+            function func() {
+                // var files = ['../../img/Apple.jpeg','../../img/Banana.jpg','../../img/StrawBarry.jpg'];
+                var n = document.getElementById("fruit").selectedIndex;
+                document.getElementById("myimg").src = files[n];
+            }
+        </script>
+    </body>
+</html>

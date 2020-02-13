@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td>onKeyDown</td>
+                <td><input type="text" onkeydown="javascript:keyevnet(this)"></td>
+            </tr>
+            <tr>
+                <td>onKeyUp</td>
+                <td><input type="text" onkeyup="javascript:keyevnet(this)"></td>
+            </tr>
+            <tr>
+                <td>onKeyPress</td>
+                <td><input type="text" onkeypress="javascript:keyevnet(this)"></td>
+            </tr>
+        </table>
+        <script>
+            function keyevnet(obj) {
+                console.log("키값:"+event.keyCode);
+                console.log(String.fromCharCode(event.keyCode));
+            }
+        </script>
+    </body>
+</html>

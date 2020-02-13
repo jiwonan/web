@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>라디오 버튼을 클릭하면 이미지를 출력합니다.</h3>
+        <hr>
+        <input type="radio" id = "0" name = "lion" onclick="func(id)">라이언1
+        <input type="radio" id = "1" name = "lion" onclick="func(id)">라이언2
+        <input type="radio" id = "2" name = "lion" onclick="func(id)">라이언3
+        <br>
+        <img src="../../img/Frozen2.jpg" id="myimg" width = "300px" height = "auto">
+        <script>
+            var files = ['../../img/elsa.jpg','../../img/anna.jpg','../../img/bruny.jpg'];
+            function func(i) {
+                document.getElementById("myimg").src = files[parseInt(i)];
+            }
+        </script>
+    </body>
+</html>

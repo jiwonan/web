@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        키이벤트 예제 <input type="text" onkeydown="javascript:func(this)">
+        <script>
+            function func(obj) {
+                var color;
+                console.log(event.keyCode);
+                switch(event.keyCode) {
+                    case 37: color="salmon"; break;
+                    case 38: color="pink"; break;
+                    case 39: color="tomato"; break;
+                    case 40: color="coral"; break;
+                }
+                document.body.style.background = color;
+            }
+        </script>
+    </body>
+</html>
